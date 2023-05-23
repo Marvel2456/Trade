@@ -27,10 +27,10 @@
                                     <tr>
                                         <th class="cell">Trader</th>
                                         <th class="cell">Balance</th>
-                                        <th class="cell">Profit/Loss</th>
+                                        {% comment %} <th class="cell">Profit/Loss</th>
                                         <th class="cell">Date/Time</th>
                                         <th class="cell"></th>
-                                        <th class="cell"></th>
+                                        <th class="cell"></th> {% endcomment %}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,12 +40,12 @@
                                             Add Inventory
                                         </a>
                                     </div>    
-                                    {% for trade in trade %}
+                                    {% for trader in trader %}
                                     <tr>
-                                        <td class="cell"><span class="truncate"></span></td>
-                                        <td class="cell"></td>
-                                        <td class="cell"></span></td>
-                                        <td class="cell"></td>
+                                        <td class="cell"><span class="truncate">{{trader.user}}</span></td>
+                                        <td class="cell">{{trader.balance}}</td>
+                                        {% comment %} <td class="cell"></span></td>
+                                        <td class="cell"></td> {% endcomment %}
                                         
                                         
                                     </tr>
@@ -58,7 +58,6 @@
                        
                     </div><!--app-card-body-->		
                 </div><!--app-card-->
-                
                 
             </div><!--tab-pane-->
             
